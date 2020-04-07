@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyFrameAnimation</string>
+    <string name="bat_start">start_value</string>
+</resources>
