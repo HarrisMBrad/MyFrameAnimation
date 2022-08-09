@@ -28,14 +28,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         batImage = (ImageView) findViewById(BatId);
-        //batImage.setBackgroundResource(R.drawable.bat_anim);
-        //batAnimation = (AnimationDrawable) batImage.getBackground();
+        batImage.setBackgroundResource(R.drawable.bat_anim);
+        batAnimation = (AnimationDrawable) batImage.getBackground();
 
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        //batAnimation.start();
+        batAnimation.start();
 
         Handler mHandler = new Handler();
         mHandler.postDelayed(new Runnable() {
@@ -46,8 +46,9 @@ public class MainActivity extends AppCompatActivity {
                         R.anim.fadein_animation);
                     batImage.startAnimation(startanimation);
 
-                //stop
-                //batAnimation.stop();
+
+                
+                batAnimation.stop();
             }
         }, 50);
 
